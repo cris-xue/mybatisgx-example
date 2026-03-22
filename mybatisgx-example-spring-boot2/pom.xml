@@ -4,13 +4,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mybatisgx</groupId>
-	<artifactId>mybatisgx-example-spring-boot</artifactId>
+	<artifactId>mybatisgx-example-spring-boot2</artifactId>
 	<version>0.0.1</version>
-	<name>mybatisgx-example-spring-boot</name>
+	<name>mybatisgx-example-spring-boot2</name>
 	<url>http://www.mybatisgx.com</url>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<java.version>1.8</java.version>
 	</properties>
 	
 	<dependencies>
