@@ -1,9 +1,12 @@
 package com.mybatisgx.example.spring.boot.entity;
 
-import com.mybatisgx.annotation.Entity;
-import com.mybatisgx.annotation.Id;
-import com.mybatisgx.annotation.Table;
+import com.mybatisgx.annotation.*;
+import lombok.Data;
+import org.apache.ibatis.mapping.FetchType;
 
+import java.util.List;
+
+@Data
 @Entity
 @Table(name = "menu")
 public class Menu {
@@ -14,4 +17,13 @@ public class Menu {
     private String code;
 
     private String name;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "menu_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    @Fetch
+    private List<Role> roleList;
 }

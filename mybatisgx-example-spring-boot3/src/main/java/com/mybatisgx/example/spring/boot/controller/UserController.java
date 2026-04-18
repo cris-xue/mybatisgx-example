@@ -18,11 +18,6 @@ public class UserController {
         return userService.add(user);
     }
 
-    @PostMapping(path = "/add-batch")
-    public int addBatch(@RequestBody List<User> userList) {
-        return userService.addBatch(userList);
-    }
-
     @DeleteMapping(path = "/delete")
     public int delete(Long id) {
         return userService.delete(id);

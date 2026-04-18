@@ -14,8 +14,6 @@ public interface UserService {
 
     int add(User user);
 
-    int addBatch(List<User> user);
-
     int delete(Long id);
 
     int modify(User user);

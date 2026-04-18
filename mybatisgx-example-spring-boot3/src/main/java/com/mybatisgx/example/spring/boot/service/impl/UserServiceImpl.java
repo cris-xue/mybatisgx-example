@@ -1,6 +1,8 @@
 package com.mybatisgx.example.spring.boot.service.impl;
 
+import com.mybatisgx.example.spring.boot.dao.RoleDao;
 import com.mybatisgx.example.spring.boot.dao.UserDao;
+import com.mybatisgx.example.spring.boot.entity.Role;
 import com.mybatisgx.example.spring.boot.entity.User;
 import com.mybatisgx.example.spring.boot.entity.UserQuery;
 import com.mybatisgx.example.spring.boot.service.UserService;
@@ -19,15 +21,17 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
+    @Autowired
+    private RoleDao roleDao;
 
     @Override
     public int add(User user) {
-        return this.userDao.insert(user);
-    }
+        this.userDao.insert(user);
 
-    @Override
-    public int addBatch(List<User> userList) {
-        return this.userDao.insertBatch(userList);
+        List<Role> roleList = user.getRoleList();
+        this.roleDao.insertBatch(roleList);
+
+        return 1;
     }
 
     @Override
