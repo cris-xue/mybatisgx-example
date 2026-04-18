@@ -3,6 +3,7 @@ package com.mybatisgx.example.spring.boot.controller;
 import com.mybatisgx.example.spring.boot.entity.User;
 import com.mybatisgx.example.spring.boot.entity.UserQuery;
 import com.mybatisgx.example.spring.boot.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
     private UserService userService;
 
     @PostMapping(path = "/add")

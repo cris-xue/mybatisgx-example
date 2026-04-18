@@ -6,4 +6,6 @@ import lombok.Data;
 @Data
 @QueryEntity(User.class)
 public class UserQuery extends User {
+
+    private String nameLike;
 }
