@@ -1,32 +1,45 @@
 package com.mybatisgx.example.spring.boot.controller;
 
-import com.mybatisgx.example.spring.boot.dao.UserDao;
 import com.mybatisgx.example.spring.boot.entity.User;
+import com.mybatisgx.example.spring.boot.entity.UserQuery;
+import com.mybatisgx.example.spring.boot.service.UserService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-    private UserDao userDao;
+    private UserService userService;
 
-    @PostMapping
+    @PostMapping(path = "/add")
     public int add(@RequestBody User user) {
-        return userDao.insert(user);
+        return userService.add(user);
     }
 
-    @DeleteMapping
+    @PostMapping(path = "/add-batch")
+    public int addBatch(@RequestBody List<User> userList) {
+        return userService.addBatch(userList);
+    }
+
+    @DeleteMapping(path = "/delete")
     public int delete(Long id) {
-        return userDao.deleteById(id);
+        return userService.delete(id);
     }
 
-    @PutMapping
+    @PutMapping(path = "/modify")
     public int modify(@RequestBody User user) {
-        return userDao.updateByIdSelective(user);
+        return userService.modify(user);
     }
 
-    @DeleteMapping("/id")
+    @GetMapping("/id")
     public User findById(Long id) {
-        return userDao.findById(id);
+        return userService.findById(id);
+    }
+
+    @GetMapping("/list")
+    public List<User> list(UserQuery userQuery) {
+        return userService.list(userQuery);
     }
 }

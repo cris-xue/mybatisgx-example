@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: mybatisgx-example-spring-boot
+    name: mybatisgx-example
   main:
     allow-bean-definition-overriding: true
   profiles:
