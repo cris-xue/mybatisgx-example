@@ -8,6 +8,7 @@ import com.mybatisgx.example.spring.boot.entity.UserQuery;
 import com.mybatisgx.example.spring.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RoleDao roleDao;
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public int add(User user) {
         this.userDao.insert(user);
@@ -34,21 +36,25 @@ public class UserServiceImpl implements UserService {
         return 1;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public int delete(Long id) {
         return this.userDao.deleteById(id);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public int modify(User user) {
         return this.userDao.updateById(user);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public User findById(Long id) {
         return this.userDao.findById(id);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public List<User> list(UserQuery userQuery) {
         return this.userDao.findList(userQuery);

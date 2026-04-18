@@ -27,7 +27,7 @@ public class Role {
     @Fetch
     private List<User> userList;
 
-    @ManyToMany(mappedBy = "roleList")
+    @ManyToMany(mappedBy = "roleList", fetch = FetchType.EAGER)
     @Fetch
     private List<Menu> menuList;
 }

@@ -2,6 +2,7 @@ package com.mybatisgx.example.spring.boot.entity;
 
 import com.mybatisgx.annotation.*;
 import lombok.Data;
+import org.apache.ibatis.mapping.FetchType;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class User {
 
     private String name;
 
-    @ManyToMany(mappedBy = "userList")
+    @ManyToMany(mappedBy = "userList", fetch = FetchType.EAGER)
     @Fetch
     private List<Role> roleList;
 }
