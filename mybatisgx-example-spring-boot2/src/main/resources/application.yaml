@@ -5,20 +5,26 @@ server:
 
 spring:
   application:
-    name: mybatisgx-example-spring-boot
+    name: mybatisgx-example-spring-boot2
   main:
     allow-bean-definition-overriding: true
   profiles:
     active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/wuyue_upms?characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/mybatisgx_example?characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
     password:
 
 mybatisgx:
-  mapper-locations: classpath:com/wuyue/upms/dao/mapper/*Mapper.xml
-  type-aliases-package: com.wuyuw.upms.model.entity
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.mybatisgx.example.spring.boot.entity
   configuration:
+    databaseId: MySQL
+    # 懒加载配置
+    lazy-loading-enabled: true
+    aggressiveLazyLoading: false
+    lazyLoadTriggerMethods: get
     map-underscore-to-camel-case: true
-    # lazy-loading-enabled: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
