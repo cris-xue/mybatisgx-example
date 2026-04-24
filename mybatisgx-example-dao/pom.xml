@@ -4,39 +4,23 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mybatisgx</groupId>
-	<artifactId>mybatisgx-example-spring-boot4</artifactId>
+	<artifactId>mybatisgx-example-dao</artifactId>
 	<version>0.0.1</version>
-	<name>mybatisgx-example-spring-boot4</name>
+	<name>mybatisgx-example-dao</name>
 	<url>http://www.mybatisgx.com</url>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-		<java.version>17</java.version>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<java.version>8</java.version>
 	</properties>
 	
 	<dependencies>
 		<dependency>
 			<groupId>com.mybatisgx</groupId>
-			<artifactId>mybatisgx-example-dao</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<version>4.0.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<version>4.0.3</version>
-		</dependency>
-		<dependency>
-			<groupId>com.mybatisgx</groupId>
-			<artifactId>mybatisgx-spring-boot4-starter</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<artifactId>mybatisgx-core</artifactId>
+			<version>0.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -58,11 +42,6 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>3.2.3</version>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

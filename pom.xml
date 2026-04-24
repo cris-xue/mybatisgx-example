@@ -11,6 +11,7 @@
 	<url>http://www.mybatisgx.com</url>
 
 	<modules>
+		<module>mybatisgx-example-dao</module>
 		<module>mybatisgx-example-spring-boot2</module>
 		<module>mybatisgx-example-spring-boot3</module>
 		<module>mybatisgx-example-spring-boot4</module>
