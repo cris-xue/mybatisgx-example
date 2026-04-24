@@ -18,12 +18,6 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>com.mybatisgx</groupId>
-			<artifactId>mybatisgx-example-dao</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>4.0.3</version>
@@ -36,7 +30,7 @@
 		<dependency>
 			<groupId>com.mybatisgx</groupId>
 			<artifactId>mybatisgx-spring-boot4-starter</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -52,12 +46,6 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.38</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.mybatisgx</groupId>
-			<artifactId>mybatisgx-example-dao</artifactId>
-			<version>0.0.1</version>
 		</dependency>
 	</dependencies>
 
