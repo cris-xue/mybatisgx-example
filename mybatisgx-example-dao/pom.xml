@@ -21,6 +21,13 @@
 			<groupId>com.mybatisgx</groupId>
 			<artifactId>mybatisgx-core</artifactId>
 			<version>0.0.6</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.3.37</version>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
