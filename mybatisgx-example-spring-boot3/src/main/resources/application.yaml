@@ -1,20 +1,20 @@
 server:
-  port: 8080
+  port: 8081
   servlet:
     context-path: /${spring.application.name}
 
 spring:
   application:
-    name: mybatisgx-example-spring-boot3
+    name: mybatisgx-example
   main:
     allow-bean-definition-overriding: true
   profiles:
     active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatisgx_example?characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/mybatisgx_example?characterEncoding=utf8&useUnicode=true&useSSL=true&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
-    password:
+    password: 123456
 
 mybatisgx:
   mapper-locations: classpath:mapper/*Mapper.xml

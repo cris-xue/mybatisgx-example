@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>com.mybatisgx</groupId>
 			<artifactId>mybatisgx-spring-boot3-starter</artifactId>
-			<version>0.0.4</version>
+			<version>0.0.8</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>

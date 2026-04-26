@@ -21,7 +21,7 @@ public class UserController {
     }
 
     @DeleteMapping(path = "/delete")
-    public int delete(Long id) {
+    public int delete(@RequestParam("id") Long id) {
         return userService.delete(id);
     }
 
@@ -31,7 +31,7 @@ public class UserController {
     }
 
     @GetMapping("/id")
-    public User findById(Long id) {
+    public User findById(@RequestParam("id") Long id) {
         return userService.findById(id);
     }
 

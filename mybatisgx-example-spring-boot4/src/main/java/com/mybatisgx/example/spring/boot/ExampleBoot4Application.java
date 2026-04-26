@@ -11,9 +11,9 @@ import org.springframework.stereotype.Repository;
         annotationClass = Repository.class
 )
 @SpringBootApplication(scanBasePackages = {"com.mybatisgx.example.spring.boot"})
-public class ExampleApplication {
+public class ExampleBoot4Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ExampleApplication.class, args);
+        SpringApplication.run(ExampleBoot4Application.class, args);
     }
 }

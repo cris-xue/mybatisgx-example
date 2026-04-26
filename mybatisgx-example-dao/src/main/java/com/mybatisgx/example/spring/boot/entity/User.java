@@ -16,7 +16,7 @@ public class User {
 
     private String name;
 
-    @ManyToMany(mappedBy = "userList", fetch = FetchType.EAGER)
-    @Fetch
+    @ManyToMany(mappedBy = "userList", fetch = FetchType.LAZY)
+    @Fetch(FetchMode.BATCH)
     private List<Role> roleList;
 }

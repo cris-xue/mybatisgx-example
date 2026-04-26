@@ -13,9 +13,9 @@ import java.net.UnknownHostException;
         annotationClass = Repository.class
 )
 @SpringBootApplication(scanBasePackages = {"com.mybatisgx.example.spring.boot"})
-public class ExampleApplication {
+public class ExampleBoot2Application {
 
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication.run(ExampleApplication.class, args);
+        SpringApplication.run(ExampleBoot2Application.class, args);
     }
 }

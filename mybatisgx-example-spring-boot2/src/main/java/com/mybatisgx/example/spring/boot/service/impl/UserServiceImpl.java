@@ -48,13 +48,11 @@ public class UserServiceImpl implements UserService {
         return this.userDao.updateById(user);
     }
 
-    @Transactional(rollbackFor = Exception.class)
     @Override
     public User findById(Long id) {
         return this.userDao.findById(id);
     }
 
-    @Transactional(rollbackFor = Exception.class)
     @Override
     public List<User> list(UserQuery userQuery) {
         return this.userDao.findList(userQuery);
