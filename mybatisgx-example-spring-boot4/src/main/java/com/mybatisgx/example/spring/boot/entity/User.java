@@ -16,6 +16,11 @@ public class User {
 
     private String name;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "dept_id")
+    @Fetch(FetchMode.NONE)
+    private Dept dept;
+
     @ManyToMany(mappedBy = "userList", fetch = FetchType.EAGER)
     @Fetch
     private List<Role> roleList;
