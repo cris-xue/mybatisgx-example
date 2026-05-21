@@ -2,11 +2,21 @@
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`
 (
-    `id`   BIGINT(20) NOT NULL COMMENT '用户ID',
-    `name` VARCHAR(100) DEFAULT NULL COMMENT '用户名',
+    `id`      BIGINT(20) NOT NULL COMMENT '用户ID',
+    `name`    VARCHAR(100) DEFAULT NULL COMMENT '用户名',
+    `dept_id` BIGINT       DEFAULT NULL COMMENT '部门id',
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='用户表';
+
+-- 部门表
+CREATE TABLE `t_dept`
+(
+    `dept_id`   BIGINT NOT NULL AUTO_INCREMENT,
+    `dept_name` varchar(100) DEFAULT NULL,
+    PRIMARY KEY (`dept_id`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4 COMMENT ='部门表';
 
 -- 角色表
 DROP TABLE IF EXISTS `role`;
@@ -61,10 +71,21 @@ CREATE TABLE `role_menu`
 -- ====================================
 
 -- 插入用户数据
-INSERT INTO `user` (`id`, `name`)
-VALUES (1, '张三'),
-       (2, '李四'),
-       (3, '王五');
+INSERT INTO `user` (`id`, `name`, `dept_id`)
+VALUES (1, '张三', 2),
+       (2, '李四', 1),
+       (3, '王五', 4),
+       (4, '唐僧', 1),
+       (5, '猪八戒', 3),
+       (6, '孙悟空', 4),
+       (7, '沙和尚', 2);
+
+-- 插入部门数据
+INSERT INTO `t_dept` (`dept_id`, `dept_name`)
+VALUES (1, '研发部'),
+       (2, '市场部'),
+       (3, '运维部'),
+       (4, '人事部');
 
 -- 插入角色数据
 INSERT INTO `role` (`id`, `code`, `name`)
