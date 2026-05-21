@@ -102,6 +102,10 @@
 ]
 ```
 
+# 用户列表【模糊查询】
+
+curl -GX GET "http://localhost:8080/mybatisgx-example/user/list" --data-urlencode "nameLike=管理"
+
 # 查询部门列表
 
 > curl http://localhost:8081/mybatisgx-example/dept/list
@@ -217,3 +221,7 @@
   }
 ]
 ```
+
+# 部门列表【模糊查询】
+
+curl -GX GET "http://localhost:8081/mybatisgx-example/dept/list" --data-urlencode "nameLike=1"
